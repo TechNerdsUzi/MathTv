@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-home',
@@ -6,11 +6,11 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit {
 
   @ViewChild('owl') owl: ElementRef;
+  showCourses: boolean = false;
   customOptions: OwlOptions = {
-
     loop: true,
     mouseDrag: true,
     touchDrag: true,
@@ -38,29 +38,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
-  ngAfterViewInit(): void {
-
-    // this.owl.nativeElement.owlCarousel({
-    //   items: 3,
-    //   responsiveClass: true,
-    //   autoplay: true,
-    //   responsive: {
-    //     0: {
-    //       items: 1,
-    //       nav: true
-    //     },
-    //     600: {
-    //       items: 2,
-    //       nav: false
-    //     },
-    //     1200: {
-    //       items: 3,
-    //       nav: true,
-    //     }
-    //   }
-    // });
+  showCoursesToggle() {
+    this.showCourses = this.showCourses ? false : true;
   }
+
 
 }

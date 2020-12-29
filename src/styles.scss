@@ -12,6 +12,9 @@ body {
     font-family: 'Raleway', sans-serif;
     overflow-x: hidden !important;
 }
+*:focus{
+    outline: 0 !important;
+}
 header{
     nav {
         background: #8F1F8B;
@@ -28,6 +31,12 @@ header{
                 }
                 @media screen and (max-width: 415px){
                     width: 264px;
+                }
+                @media screen and (max-width: 360px){
+                    width: 240px;
+                }
+                @media screen and (max-width: 320px){
+                    width: 220px;
                 }
                 .select-icon{
                     position: absolute;
@@ -66,6 +75,14 @@ header{
                     min-width: 352px;
                     max-width: 100%;
                 }
+                @media screen and (max-width: 360px){
+                    min-width: 326px;
+                    max-width: 100%;
+                }
+                @media screen and (max-width: 320px){
+                    min-width: 306px;
+                    max-width: 100%;
+                }
                 .search-icon{
                     position: absolute;
                     color: #fff;
@@ -100,6 +117,7 @@ header{
         }
     }
 }
+
 .banner{
     height: 215px;
     background: rgba(143, 31, 139, 0.15);
@@ -137,6 +155,7 @@ header{
         }
     }
     .detail_banner {
+        z-index: 1;
         position: relative;
         height: 94px;
         top: 70px;
@@ -149,6 +168,16 @@ header{
             bottom: 200px;
             min-width: 360px;
             max-width: 360px;
+        }
+        @media screen and (max-width: 360px){
+            height: 280px;
+            min-width: 300px;
+            max-width: 300px;
+        }
+        @media screen and (max-width: 320px){
+            height: 280px;
+            min-width: 300px;
+            max-width: 300px;
         }
         .image-container{
             width: 65px;
@@ -175,25 +204,65 @@ header{
                 font-size: 16px;
                 line-height: 19.2px;
                 color: black;
+                @media screen and (max-width: 360px){
+                    font-size: 13px;
+                }
             }
         }
     }
 }
+
 .course-section{
-    height: 576px;
+    height: 220px;
     background-color: #F8F7F7;
     @media screen and (max-width: 768px) {
-        height: 769px ;
+        height: auto;
     }
     @media screen and (max-width: 415px) {
-        height: 1223px ;
+        height: auto;
+    }
+    .offers img{
+        position: absolute;
+        left: 45px;
+        top: 70px;
+        @media screen and (max-width: 768px) {
+            left: 25px;
+        }
+        @media screen and (max-width: 415px){
+            right: 15px;
+            top: 88px;
+            left: unset;
+        }
+    }
+    .course-btn{
+        width: 220px;
+        height: 48px;
+        filter: drop-shadow(0px 10px 10px rgba(35, 63, 1, 0.15));
+        background: #6A8F1F;
+        border-radius: 4px;
+        font-family: Segoe UI;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 47px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 0px;
+    }
+    .course-btn{
+        color: #FFFFFF !important;
     }
     .text-section{
         @media screen and (max-width: 768px) {
             margin-top: 130px !important;
+            width: 330px;
         }
         @media screen and (max-width: 415px) {
-            margin-top: 100px !important;
+            margin-top: 240px !important;
+        }
+        @media screen and (max-width: 320px) {
+            width: 300px;
         }
         h1{
             font-weight: 400;
@@ -211,18 +280,132 @@ header{
             font-family: 'Segoe UI';
         }
     }
-    .courses{
-        height: 248px;
-        // width: 1025px;
+    .hide-courses{
+        display: block;
+        height: 0px;
+        overflow: hidden;
+        -webkit-transition: height 1s ease;
+        -moz-transition: height 1s ease;
+        -o-transition: height 1s ease;
+        transition: height 1s ease;
+        .courses-mob{
+            // display: none;
+            // width: 1025px;
+            .course{
+                height: 72px;
+                background: #FFFFFF;
+                box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 6px;
+                .course-icon{
+                    width: 61px;
+                    height: 72px;
+                }
+                p{
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 120%;
+                    color: #1B1B1B;
+                    align-items: center;
+                    text-transform: uppercase;
+                }
+                .s1{
+                    background: #FCC02A;
+                    border-radius: 6px 0px 0px 6px;
+                }
+                .s2{
+                    background: #0B7A6A;
+                    border-radius: 6px 0px 0px 6px;
+                }
+                .s3{
+                    background: #455B66;
+                    border-radius: 6px 0px 0px 6px;
+                }
+                .s4{
+                    background: #D62D30;
+                    border-radius: 6px 0px 0px 6px;
+                }
+                .s5{
+                    background: #783294;
+                    border-radius: 6px 0px 0px 6px;
+                }
+                .s6{
+                    background: #8F1F1F;
+                    border-radius: 6px 0px 0px 6px;
+                }
+                .s7{
+                    background: #6A8F1F;
+                    border-radius: 6px 0px 0px 6px;
+                }
+                .s8{
+                    background: #5E4139;
+                    border-radius: 6px 0px 0px 6px;
+                }
+                .s9{
+                    background: #1998A7;
+                    border-radius: 6px 0px 0px 6px;
+                }
+            }
+        }
+    }
+
+    .hide-courses.show{
+        @media screen and (max-width:768px) {
+            height: 500px;
+        }
+        @media screen and (max-width:415px) {
+            height: 830px;
+        }
+    }
+
+}
+
+.courses{
+    height: 1204px;
+    width: 100%;
+    background-image: url(./assets/images/bg.png);
+    background-repeat: no-repeat;
+    background-size:  cover;
+    background-position: center;
+    @media screen and (max-width:768px){
+        height: 1220px;
+    }
+    @media screen and (max-width:415px){
+        height: 1220px;
+    }
+    /* width */
+    ::-webkit-scrollbar {
+    width: 8px;
+    position: relative;
+    }
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: rgba(218, 219, 216, 0.5);
+    opacity: 0;
+    border-radius: 6px;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: #6A8F1F;
+    border-radius: 6px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+    }
+    .course-info-section{
         .course{
+            cursor: pointer;
             height: 72px;
-            // width: 320px;
             background: #FFFFFF;
             box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
             border-radius: 6px;
             .course-icon{
                 width: 61px;
                 height: 72px;
+                cursor: pointer;
             }
             p{
                 font-family: 'Montserrat';
@@ -233,6 +416,7 @@ header{
                 color: #1B1B1B;
                 align-items: center;
                 text-transform: uppercase;
+                cursor: pointer;
             }
             .s1{
                 background: #FCC02A;
@@ -271,165 +455,197 @@ header{
                 border-radius: 6px 0px 0px 6px;
             }
         }
-    }
-}
-.featured-container{
-    height: 1033px;
-    background: url(assets/images/bg.jpg) rgba(0, 0, 0, 0.6);
-    background-repeat: no-repeat;
-    background-size:  cover;
-    background-position: center;
-    background-blend-mode: overlay;
-    @media screen and (max-width: 768px) {
-        height: 1368px;
-    }
-    @media screen and (max-width: 415px) {
-        height: 2400px;
-    }    
-    .text-section{
-        h1{
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: normal;
-            font-size: 35px;
-            line-height: 43px;
-            color: #FFFFFF;
-        }
-        p{
-            font-family: 'Segoe UI';
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 27px;
-            color: #FFFFFF;
-        }
-    }
-    .tutor{
-        height: 336px;
-        background-color: #FFFFFF;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 6px;
-        position: relative;
-        .language{
-            position: absolute;
-            right: 0;
-            top: 0;
-            background: #6A8F1F;
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 0px 6px 0px 0px;
-            height: 40px;
+        .course-info{
+            display: block;
+            height: 0px;
+            margin: 0px;
+            padding-left: 24px;
+            background: #FFFFFF;
+            -webkit-transition: height 1s ease, margin .5s ease;
+            -moz-transition: height 1s ease, margin .5s ease;
+            -o-transition: height 1s ease, margin .5s ease;
+            transition: height 1s ease, margin .5s ease;
+            overflow: hidden;
             p{
-                font-family: 'Segoe UI';
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 19px;
-                color: #FFFFFF;
-            }
-        }
-        .image-container{
-            width: 100%;
-            height: 192px;
-            .play-btn{
-                background-color: #8F1F8B;
-                border-radius: 4px;
-                font-size: 14px;
-                font-family: 'Segoe UI';
-                color: #FFFFFF;
-                font-weight: 600;
-                span{
-                    position: relative;
-                    bottom: 2px;
-                }
-            }
-        }
-        .t-1{
-            background: url(assets/images/1.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .t-2{
-            background: url(assets/images/2.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .t-3{
-            background: url(assets/images/3.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .t-4{
-            background: url(assets/images/4.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .t-5{
-            background: url(assets/images/5.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .t-6{
-            background: url(assets/images/6.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .tutor-text{
-            height: 57px;
-            .b-color{
-                color: #1B1B1B;
-            }
-            h1{
-                font-family: 'Raleway';
+                font-family: Raleway;
                 font-style: normal;
                 font-weight: normal;
                 font-size: 16px;
                 line-height: 120%;
                 letter-spacing: 0.02em;
-                color: #FFFFFF;
+                color: #1B1B1B;
+                margin: 0px 8px;
+                padding: 5px 0px;
             }
         }
-        .bg-1{
-            background: #F1D330;
+        .course-info.show{
+            height: 300px;
+            margin: 1rem 0px;
         }
-        .bg-2{
-            background: #D62D30;
-        }
-        .bg-3{
-            background: #455B66;
-        }
-        .bg-4{
-            background: #0B7A6A;
-        }
-        .bg-5{
-            background: #783294;
-        }
-        .bg-6{
-            background: #1998A7;
-        }
-        .tutor-info{
-            h1{
-                font-family: 'Segoe UI';
-                font-style: normal;
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 19px;
-                color: #212529;
-            }
-            p{
-                font-family: 'Segoe UI';
-                font-style: normal;
-                font-weight: normal;
-                font-size: 14px;
-                line-height: 17px;
-                color: #8F1F1F;
+    }
+    .tutor-container{
+        // display: none;
+        height: 1100px;
+        overflow-y: scroll;
+        .tutor-section{
+            width: 100%;
+            .tutor{
+                height: 370px;
+                background-color: #FFFFFF;
+                box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 6px;
+                position: relative;
+                @media screen and (max-width:415px){
+                    width: 350px;
+                    height: 340px;
+                }
+                @media screen and (max-width:360px){
+                    width: 310px;
+                    height: 315px;
+                }
+                @media screen and (max-width:320px){
+                    width: 255px;
+                    height: 315px;
+                }
+                .language{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    background: #6A8F1F;
+                    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+                    border-radius: 0px 6px 0px 0px;
+                    height: 40px;
+                    p{
+                        font-family: 'Segoe UI';
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #FFFFFF;
+                    }
+                }
+                .image-container{
+                    width: 100%;
+                    height: 250px;
+                    @media screen and (max-width:415px){
+                        height: 220px;
+                    }
+                    @media screen and (max-width:360px){
+                        height: 190px;
+                    }
+                    .play-btn{
+                        background-color: #8F1F8B;
+                        border-radius: 4px;
+                        font-size: 14px;
+                        font-family: 'Segoe UI';
+                        color: #FFFFFF;
+                        font-weight: 600;
+                        span{
+                            position: relative;
+                            bottom: 2px;
+                        }
+                    }
+                }
+                .t-1{
+                    background: url(assets/images/1.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .t-2{
+                    background: url(assets/images/2.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .t-3{
+                    background: url(assets/images/3.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .t-4{
+                    background: url(assets/images/4.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .t-5{
+                    background: url(assets/images/5.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .t-6{
+                    background: url(assets/images/6.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .tutor-text{
+                    height: 57px;
+                    .b-color{
+                        color: #1B1B1B;
+                    }
+                    h1{
+                        font-family: 'Raleway';
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 120%;
+                        letter-spacing: 0.02em;
+                        color: #FFFFFF;
+                    }
+                }
+                .bg-1{
+                    background: #F1D330;
+                }
+                .bg-2{
+                    background: #D62D30;
+                }
+                .bg-3{
+                    background: #455B66;
+                }
+                .bg-4{
+                    background: #0B7A6A;
+                }
+                .bg-5{
+                    background: #783294;
+                }
+                .bg-6{
+                    background: #1998A7;
+                }
+                .tutor-info{
+                    h1{
+                        font-family: 'Segoe UI';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #212529;
+                    }
+                    p{
+                        font-family: 'Segoe UI';
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #8F1F1F;
+                    }
+                }
             }
         }
     }
 }
+
 .testimonal-container{
-    height: 605px;
+    height: 628px;
     background-color: #F8F7F7;
+    .offers img{
+        position: absolute;
+        right: 70px;
+        top: 50px;
+        @media screen and (max-width: 768px) {
+            right: 30px;
+            top: -35px;
+        }
+    }
     .text-section{
+        margin-top: 100px;
         h1{
             font-family: 'Raleway';
             font-style: normal;
@@ -550,6 +766,7 @@ header{
         }
     }
 }
+
 .topic-container{
     height: 160px;
     background: #6A8F1F;
@@ -606,6 +823,7 @@ header{
         }
     }
 }
+
 .footer{
     background: #1B1B1B;
     .top-section{
@@ -649,6 +867,10 @@ header{
             }
         }
         .right-section{
+            @media screen and (max-width: 415px){
+                position: relative;
+                bottom: 20px;
+            }
             h1{
                 font-family: 'Raleway';
                 font-style: normal;
@@ -688,6 +910,13 @@ header{
             }
         }
         .right-section{
+            @media screen and (max-width: 415px){
+                justify-content: space-around;
+            }
+            @media screen and (max-width: 320px){
+                position: relative;
+                top: 8px;
+            }
             p{
                 font-family: 'Segoe UI';
                 font-style: normal;

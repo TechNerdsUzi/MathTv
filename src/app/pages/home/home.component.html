@@ -22,6 +22,7 @@
     </nav>
 </header>
 <!-- Header -->
+
 <!-- Banner -->
 <div class="banner w-100 d-flex flex-column justify-content-md-center align-items-center">
     <div class="banner-text text-center px-md-0 px-4 mt-md-0 mt-4">
@@ -59,224 +60,423 @@
     </div>
 </div>
 <!-- Banner -->
+
 <!-- Course -->
-<div class="course-section d-flex flex-column justify-content-xl-center justify-content-lg-center align-items-center">
+<div class="course-section position-relative d-flex flex-column justify-content-xl-center justify-content-lg-center align-items-center">
+    <div class="offers">
+        <img src="assets/images/chegg-save-control-300x250.png">
+    </div>
     <div class="container text-section text-center mt-5">
-        <h1>Choose a Course</h1>
+        <h1 class="d-lg-block d-none">Choose a Course</h1>
+        <div class="d-lg-none">
+            <button class="btn course-btn" (click)="showCoursesToggle()">Choose a Course</button>
+        </div>
         <p>We offer a wide range of math topics ranging from Basic Math to Calculus!</p>
     </div>
-    <div class="container courses mt-4">
+    <div class="hide-courses" [ngClass]="{'show': showCourses}">
+        <div class="container courses-mob mt-4">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s1 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/1.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s2 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/2.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s3 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/3.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s4 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/4.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s5 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/5.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s6 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/6.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s7 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/7.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s8 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/8.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s9 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/9.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="courses py-5">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
-                <div class="course d-flex justify-content-start align-items-center">
-                    <div class="course-icon s1 d-flex flex-column justify-content-center align-items-center">
-                        <img src="assets/images/1.png">
+            <div class="col-4 d-lg-block d-none px-md-5">
+                <div class="course-info-section my-3" appDropdown>
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s1 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/1.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
                     </div>
-                    <p class="m-0 ml-2">Math Fundamentals</p>
+                    <div class="course-info">
+                        <p>Whole Numbers</p>
+                        <p>Fractions II: Addition and Substraction</p>
+                        <p>Ratio and Proportion</p>
+                        <p>Measurement</p>
+                        <p>Descriptive Staticrics</p>
+                        <p>Fractions I: Multiplication and Division</p>
+                        <p>Decimals</p>
+                        <p>Percent</p>
+                        <p>Geometry</p>
+                        <p>Real Numbers</p>
+                    </div>
+                </div>
+                <div class="course-info-section my-3" appDropdown>
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s2 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/2.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                    <div class="course-info">
+                        <p>Whole Numbers</p>
+                        <p>Fractions II: Addition and Substraction</p>
+                        <p>Ratio and Proportion</p>
+                        <p>Measurement</p>
+                        <p>Descriptive Staticrics</p>
+                        <p>Fractions I: Multiplication and Division</p>
+                        <p>Decimals</p>
+                        <p>Percent</p>
+                        <p>Geometry</p>
+                        <p>Real Numbers</p>
+                    </div>
+                </div>
+                <div class="course-info-section my-3" appDropdown>
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s3 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/3.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                    <div class="course-info">
+                        <p>Whole Numbers</p>
+                        <p>Fractions II: Addition and Substraction</p>
+                        <p>Ratio and Proportion</p>
+                        <p>Measurement</p>
+                        <p>Descriptive Staticrics</p>
+                        <p>Fractions I: Multiplication and Division</p>
+                        <p>Decimals</p>
+                        <p>Percent</p>
+                        <p>Geometry</p>
+                        <p>Real Numbers</p>
+                    </div>
+                </div>
+                <div class="course-info-section my-3" appDropdown>
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s4 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/4.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                    <div class="course-info">
+                        <p>Whole Numbers</p>
+                        <p>Fractions II: Addition and Substraction</p>
+                        <p>Ratio and Proportion</p>
+                        <p>Measurement</p>
+                        <p>Descriptive Staticrics</p>
+                        <p>Fractions I: Multiplication and Division</p>
+                        <p>Decimals</p>
+                        <p>Percent</p>
+                        <p>Geometry</p>
+                        <p>Real Numbers</p>
+                    </div>
+                </div>
+                <div class="course-info-section my-3" appDropdown>
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s5 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/5.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                    <div class="course-info">
+                        <p>Whole Numbers</p>
+                        <p>Fractions II: Addition and Substraction</p>
+                        <p>Ratio and Proportion</p>
+                        <p>Measurement</p>
+                        <p>Descriptive Staticrics</p>
+                        <p>Fractions I: Multiplication and Division</p>
+                        <p>Decimals</p>
+                        <p>Percent</p>
+                        <p>Geometry</p>
+                        <p>Real Numbers</p>
+                    </div>
+                </div>
+                <div class="course-info-section my-3" appDropdown>
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s6 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/6.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                    <div class="course-info">
+                        <p>Whole Numbers</p>
+                        <p>Fractions II: Addition and Substraction</p>
+                        <p>Ratio and Proportion</p>
+                        <p>Measurement</p>
+                        <p>Descriptive Staticrics</p>
+                        <p>Fractions I: Multiplication and Division</p>
+                        <p>Decimals</p>
+                        <p>Percent</p>
+                        <p>Geometry</p>
+                        <p>Real Numbers</p>
+                    </div>
+                </div>
+                <div class="course-info-section my-3" appDropdown>
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s7 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/7.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                    <div class="course-info">
+                        <p>Whole Numbers</p>
+                        <p>Fractions II: Addition and Substraction</p>
+                        <p>Ratio and Proportion</p>
+                        <p>Measurement</p>
+                        <p>Descriptive Staticrics</p>
+                        <p>Fractions I: Multiplication and Division</p>
+                        <p>Decimals</p>
+                        <p>Percent</p>
+                        <p>Geometry</p>
+                        <p>Real Numbers</p>
+                    </div>
+                </div>
+                <div class="course-info-section my-3" appDropdown>
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s8 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/8.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                    <div class="course-info">
+                        <p>Whole Numbers</p>
+                        <p>Fractions II: Addition and Substraction</p>
+                        <p>Ratio and Proportion</p>
+                        <p>Measurement</p>
+                        <p>Descriptive Staticrics</p>
+                        <p>Fractions I: Multiplication and Division</p>
+                        <p>Decimals</p>
+                        <p>Percent</p>
+                        <p>Geometry</p>
+                        <p>Real Numbers</p>
+                    </div>
+                </div>
+                <div class="course-info-section my-3" appDropdown>
+                    <div class="course d-flex justify-content-start align-items-center">
+                        <div class="course-icon s9 d-flex flex-column justify-content-center align-items-center">
+                            <img src="assets/images/9.png">
+                        </div>
+                        <p class="m-0 ml-2">Math Fundamentals</p>
+                    </div>
+                    <div class="course-info">
+                        <p>Whole Numbers</p>
+                        <p>Fractions II: Addition and Substraction</p>
+                        <p>Ratio and Proportion</p>
+                        <p>Measurement</p>
+                        <p>Descriptive Staticrics</p>
+                        <p>Fractions I: Multiplication and Division</p>
+                        <p>Decimals</p>
+                        <p>Percent</p>
+                        <p>Geometry</p>
+                        <p>Real Numbers</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
-                <div class="course d-flex justify-content-start align-items-center">
-                    <div class="course-icon s2 d-flex flex-column justify-content-center align-items-center">
-                        <img src="assets/images/2.png">
+            <div class="col-lg-8 col-md-12 col-12 px-md-5">
+                <div class="tutor-container pr-md-4">
+                    <div class="tutor-section my-3">
+                        <div class="tutor p-2">
+                            <div class="image-container t-1 d-flex flex-column justify-content-center align-items-center">
+                                <button class="btn play-btn">
+                                    <span>
+                                        <img src="assets/images/Icon-Play-Circle.png" alt="">
+                                    </span>
+                                    PLAY
+                                </button>
+                            </div>
+                            <div class="tutor-text bg-1 d-flex justify-content-between align-items-center">
+                                <h1 class="ml-2 mb-0 b-color">Graphing Ordered Pairs and Finding Solutions</h1>
+                                <img src="assets/images/Maximize-2.png" class="mr-4">
+                            </div>
+                            <div class="tutor-info">
+                                <h1 class="ml-2">Molly S.</h1>
+                                <p class="ml-2">Peer Tutor</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="m-0 ml-2">Math Fundamentals</p>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
-                <div class="course d-flex justify-content-start align-items-center">
-                    <div class="course-icon s3 d-flex flex-column justify-content-center align-items-center">
-                        <img src="assets/images/3.png">
+                    <div class="tutor-section my-3">
+                        <div class="tutor p-2">
+                            <div class="image-container t-2 d-flex flex-column justify-content-center align-items-center">
+                                <button class="btn play-btn">
+                                    <span>
+                                        <img src="assets/images/Icon-Play-Circle.png" alt="">
+                                    </span>
+                                    PLAY
+                                </button>
+                            </div>
+                            <div class="tutor-text bg-2 d-flex justify-content-between align-items-center">
+                                <h1 class="ml-2 mb-0">Proving Identities</h1>
+                                <img src="assets/images/Maximize-2.png" class="mr-4">
+                            </div>
+                            <div class="tutor-info">
+                                <h1 class="ml-2">Gordon</h1>
+                                <p class="ml-2">Peer Tutor</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="m-0 ml-2">Math Fundamentals</p>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
-                <div class="course d-flex justify-content-start align-items-center">
-                    <div class="course-icon s4 d-flex flex-column justify-content-center align-items-center">
-                        <img src="assets/images/4.png">
+                    <div class="tutor-section my-3">
+                        <div class="tutor p-2">
+                            <div class="image-container t-3 d-flex flex-column justify-content-center align-items-center">
+                                <button class="btn play-btn">
+                                    <span>
+                                        <img src="assets/images/Icon-Play-Circle.png" alt="">
+                                    </span>
+                                    PLAY
+                                </button>
+                            </div>
+                            <div class="tutor-text bg-3 d-flex justify-content-between align-items-center">
+                                <h1 class="ml-2 mb-0">Factoring by Grouping</h1>
+                                <img src="assets/images/Maximize-2.png" class="mr-4">
+                            </div>
+                            <div class="tutor-info">
+                                <h1 class="ml-2">Brooke</h1>
+                                <p class="ml-2">Peer Tutor</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="m-0 ml-2">Math Fundamentals</p>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
-                <div class="course d-flex justify-content-start align-items-center">
-                    <div class="course-icon s5 d-flex flex-column justify-content-center align-items-center">
-                        <img src="assets/images/5.png">
+                    <div class="tutor-section my-3">
+                        <div class="tutor p-2">
+                            <div class="language d-flex flex-column justify-content-center align-items-center">
+                                <p class="p-0 m-0 px-4">Spanish</p>
+                            </div>
+                            <div class="image-container t-4 d-flex flex-column justify-content-center align-items-center">
+                                <button class="btn play-btn">
+                                    <span>
+                                        <img src="assets/images/Icon-Play-Circle.png" alt="">
+                                    </span>
+                                    PLAY
+                                </button>
+                            </div>
+                            <div class="tutor-text bg-4 d-flex justify-content-between align-items-center">
+                                <h1 class="ml-2 mb-0">Linear Inequalities</h1>
+                                <img src="assets/images/Maximize-2.png" class="mr-4">
+                            </div>
+                            <div class="tutor-info">
+                                <h1 class="ml-2">Julieta</h1>
+                                <p class="ml-2">Peer Tutor</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="m-0 ml-2">Math Fundamentals</p>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
-                <div class="course d-flex justify-content-start align-items-center">
-                    <div class="course-icon s6 d-flex flex-column justify-content-center align-items-center">
-                        <img src="assets/images/6.png">
+                    <div class="tutor-section my-3">
+                        <div class="tutor p-2">
+                            <div class="image-container t-5 d-flex flex-column justify-content-center align-items-center">
+                                <button class="btn play-btn">
+                                    <span>
+                                        <img src="assets/images/Icon-Play-Circle.png" alt="">
+                                    </span>
+                                    PLAY
+                                </button>
+                            </div>
+                            <div class="tutor-text bg-5 d-flex justify-content-between align-items-center">
+                                <h1 class="ml-2 mb-0">Subtracting</h1>
+                                <img src="assets/images/Maximize-2.png" class="mr-4">
+                            </div>
+                            <div class="tutor-info">
+                                <h1 class="ml-2">Lauren D.</h1>
+                                <p class="ml-2">Peer Tutor</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="m-0 ml-2">Math Fundamentals</p>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
-                <div class="course d-flex justify-content-start align-items-center">
-                    <div class="course-icon s7 d-flex flex-column justify-content-center align-items-center">
-                        <img src="assets/images/7.png">
+                    <div class="tutor-section my-3">
+                        <div class="tutor p-2">
+                            <div class="image-container t-6 d-flex flex-column justify-content-center align-items-center">
+                                <button class="btn play-btn">
+                                    <span>
+                                        <img src="assets/images/Icon-Play-Circle.png" alt="">
+                                    </span>
+                                    PLAY
+                                </button>
+                            </div>
+                            <div class="tutor-text bg-6 d-flex justify-content-between align-items-center">
+                                <h1 class="ml-2 mb-0">Graphing Ordered Pairs and Finding Solutions</h1>
+                                <img src="assets/images/Maximize-2.png" class="mr-4">
+                            </div>
+                            <div class="tutor-info">
+                                <h1 class="ml-2">Mr. McKeague</h1>
+                                <p class="ml-2">Math Teacher</p>
+                            </div>
+                        </div>
                     </div>
-                    <p class="m-0 ml-2">Math Fundamentals</p>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
-                <div class="course d-flex justify-content-start align-items-center">
-                    <div class="course-icon s8 d-flex flex-column justify-content-center align-items-center">
-                        <img src="assets/images/8.png">
-                    </div>
-                    <p class="m-0 ml-2">Math Fundamentals</p>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-2 my-lg-2 my-md-2 my-2">
-                <div class="course d-flex justify-content-start align-items-center">
-                    <div class="course-icon s9 d-flex flex-column justify-content-center align-items-center">
-                        <img src="assets/images/9.png">
-                    </div>
-                    <p class="m-0 ml-2">Math Fundamentals</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Course -->
-<!-- Featured Video -->
-<div class="featured-container d-flex flex-column justify-content-center align-items-center">
-    <div class="container text-section text-center">
-        <h1>Featured Videos</h1>
-        <p>Our popular videos guaranteed to help you learn!</p>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-4 my-lg-3 my-md-3 my-3">
-                <div class="tutor p-2">
-                    <div class="image-container t-1 d-flex flex-column justify-content-center align-items-center">
-                        <button class="btn play-btn">
-                            <span>
-                                <img src="assets/images/Icon-Play-Circle.png" alt="">
-                            </span>
-                            PLAY
-                        </button>
-                    </div>
-                    <div class="tutor-text bg-1 d-flex flex-column justify-content-center align-items-start">
-                        <h1 class="ml-2 mb-0 b-color">Graphing Ordered Pairs and Finding Solutions</h1>
-                    </div>
-                    <div class="tutor-info">
-                        <h1 class="ml-2">Molly S.</h1>
-                        <p class="ml-2">Peer Tutor</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-4 my-lg-3 my-md-3 my-3">
-                <div class="tutor p-2">
-                    <div class="image-container t-2 d-flex flex-column justify-content-center align-items-center">
-                        <button class="btn play-btn">
-                            <span>
-                                <img src="assets/images/Icon-Play-Circle.png" alt="">
-                            </span>
-                            PLAY
-                        </button>
-                    </div>
-                    <div class="tutor-text bg-2 d-flex flex-column justify-content-center align-items-start">
-                        <h1 class="ml-2 mb-0">Proving Identities</h1>
-                    </div>
-                    <div class="tutor-info">
-                        <h1 class="ml-2">Gordon</h1>
-                        <p class="ml-2">Peer Tutor</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-4 my-lg-3 my-md-3 my-3">
-                <div class="tutor p-2">
-                    <div class="image-container t-3 d-flex flex-column justify-content-center align-items-center">
-                        <button class="btn play-btn">
-                            <span>
-                                <img src="assets/images/Icon-Play-Circle.png" alt="">
-                            </span>
-                            PLAY
-                        </button>
-                    </div>
-                    <div class="tutor-text bg-3 d-flex flex-column justify-content-center align-items-start">
-                        <h1 class="ml-2 mb-0">Factoring by Grouping</h1>
-                    </div>
-                    <div class="tutor-info">
-                        <h1 class="ml-2">Brooke</h1>
-                        <p class="ml-2">Peer Tutor</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-4 my-lg-3 my-md-3 my-3">
-                <div class="tutor p-2">
-                    <div class="language d-flex flex-column justify-content-center align-items-center">
-                        <p class="p-0 m-0 px-4">Spanish</p>
-                    </div>
-                    <div class="image-container t-4 d-flex flex-column justify-content-center align-items-center">
-                        <button class="btn play-btn">
-                            <span>
-                                <img src="assets/images/Icon-Play-Circle.png" alt="">
-                            </span>
-                            PLAY
-                        </button>
-                    </div>
-                    <div class="tutor-text bg-4 d-flex flex-column justify-content-center align-items-start">
-                        <h1 class="ml-2 mb-0">Linear Inequalities</h1>
-                    </div>
-                    <div class="tutor-info">
-                        <h1 class="ml-2">Julieta</h1>
-                        <p class="ml-2">Peer Tutor</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-4 my-lg-3 my-md-3 my-3">
-                <div class="tutor p-2">
-                    <div class="image-container t-5 d-flex flex-column justify-content-center align-items-center">
-                        <button class="btn play-btn">
-                            <span>
-                                <img src="assets/images/Icon-Play-Circle.png" alt="">
-                            </span>
-                            PLAY
-                        </button>
-                    </div>
-                    <div class="tutor-text bg-5 d-flex flex-column justify-content-center align-items-start">
-                        <h1 class="ml-2 mb-0">Subtracting</h1>
-                    </div>
-                    <div class="tutor-info">
-                        <h1 class="ml-2">Lauren D.</h1>
-                        <p class="ml-2">Peer Tutor</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 my-xl-4 my-lg-3 my-md-3 my-3">
-                <div class="tutor p-2">
-                    <div class="image-container t-6 d-flex flex-column justify-content-center align-items-center">
-                        <button class="btn play-btn">
-                            <span>
-                                <img src="assets/images/Icon-Play-Circle.png" alt="">
-                            </span>
-                            PLAY
-                        </button>
-                    </div>
-                    <div class="tutor-text bg-6 d-flex flex-column justify-content-center align-items-start">
-                        <h1 class="ml-2 mb-0">Graphing Ordered Pairs and Finding Solutions</h1>
-                    </div>
-                    <div class="tutor-info">
-                        <h1 class="ml-2">Mr. McKeague</h1>
-                        <p class="ml-2">Math Teacher</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Featured Video -->
+
 <!-- Testimonials -->
-<div class="testimonal-container d-flex flex-column justify-content-center align-items-center">
+<div class="testimonal-container position-relative d-flex flex-column justify-content-center align-items-center">
+    <div class="offers">
+        <img src="assets/images/chegg-save-control-300x250.png">
+    </div>
     <div class="container text-section text-center">
-        <h1>Featured Videos</h1>
-        <p>Our popular videos guaranteed to help you learn!</p>
+        <h1>Testimonials</h1>
+        <p>We asked our users to share their experience with you</p>
     </div>
     <div class="container">
         <owl-carousel-o [options]="customOptions">
@@ -476,6 +676,7 @@
     </div>
 </div>
 <!-- Testimonials -->
+
 <!-- topic -->
 <div class="topic-container d-flex flex-column flex-md-row justify-content-md-between justify-content-center align-items-center">
     <div class="text-section ml-lg-4 ml-xl-5 ml-md-4">
@@ -485,6 +686,7 @@
     <button class="btn video-btn mr-md-4">watch a video</button>
 </div>
 <!-- topic -->
+
 <!-- footer -->
 <div class="footer">
     <div class="top-section w-full d-flex flex-column flex-md-row justify-content-md-between">
@@ -504,16 +706,26 @@
         </div>
     </div>
 
-    <div class="bottom-section p-4 d-flex flex-md-row flex-column-reverse align-items-center justify-content-center justify-content-md-between">
+    <div class="bottom-section p-md-4 d-flex flex-md-row flex-column-reverse align-items-center justify-content-center justify-content-md-between">
         <div class="left-section">
             <p>Copyright 2020 McKeague Textbooks, LLC</p>
         </div>
-        <div class="right-section d-flex">
-            <p class="mx-lg-3 mx-lg-3 mx-md-2 mx-2">About</p>
-            <p class="mx-lg-3 mx-lg-3 mx-md-2 mx-2">Terms</p>
-            <p class="mx-lg-3 mx-lg-3 mx-md-2 mx-2">FAQs</p>
-            <p class="mx-lg-3 mx-lg-3 mx-md-2 mx-2">Contact</p>
-            <p class="mx-lg-3 mx-lg-3 mx-md-2 mx-2">XYZ Textbooks</p>
+        <div class="right-section d-flex flex-wrap">
+            <div>
+                <p class="mx-lg-3 mx-lg-3 mx-md-2 mx-2">About</p>
+            </div>
+            <div>
+                <p class="mx-lg-3 mx-lg-3 mx-md-2 mx-2">Terms</p>
+            </div>
+            <div>
+                <p class="mx-lg-3 mx-lg-3 mx-md-2 mx-2">FAQs</p>
+            </div>
+            <div>
+                <p class="mx-lg-3 mx-lg-3 mx-md-2 mx-2">Contact</p>
+            </div>
+            <div>
+                <p class="mx-lg-3 mx-lg-3 mx-md-2 mx-2">XYZ Textbooks</p>
+            </div>
         </div>
     </div>
 
